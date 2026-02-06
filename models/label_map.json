@@ -1,0 +1,10 @@
+{
+  "Ball Defects": 0,
+  "Clean": 1,
+  "Craters": 2,
+  "Flakes": 3,
+  "Others": 4,
+  "Particles": 5,
+  "Residues": 6,
+  "Scratches": 7
+}
