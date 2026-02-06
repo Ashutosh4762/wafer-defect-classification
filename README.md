@@ -1,5 +1,4 @@
-Wafer Defect Classification using MobileNetV3
-
+**Wafer Defect Classification using MobileNetV3**
 This project focuses on automatic wafer defect classification using SEM (Scanning Electron Microscope) images. The goal is to accurately classify wafer surface conditions into 8 categories using a lightweight, high-performance deep learning model suitable for edge and real-time deployment.
 
 The solution is designed to be:
@@ -85,7 +84,9 @@ Confusion Matrix
 
 
 🖥️ User Interface (Streamlit)
-A minimal Streamlit UI is provided to:
+A minimal Streamlit U<img width="2000" height="1600" alt="confusion_matrix" src="https://github.com/user-attachments/assets/d1bfc9ef-23c5-4251-88c9-f02d5cd2d712" />
+<img width="2000" height="1600" alt="confusion_matrix" src="https://github.com/user-attachments/assets/e407e17e-8c9a-46af-95e9-9b09ce5f33c7" />
+I is provided to:
 Upload single or multiple images
 View images directly
 Predict defect class for each image
