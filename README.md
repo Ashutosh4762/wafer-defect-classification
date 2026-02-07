@@ -112,38 +112,55 @@ Model size after export: ~6 MB (No external onnx_data required)
 ```
 Project Organization
 
-├── LICENSE
-├── README.md                      <- The top-level README for developers using this project.
-├── requirements.txt               <- The requirements file for reproducing the environment.
+├── config
+│   └── config.yaml
+│       <- All project configuration: paths, hyperparameters, settings
 │
-├── data
-│   ├── processed                  <- The final, canonical dataset used for modeling.
-│   └── raw                        <- The original, immutable SEM image dataset.
+├── models
+│   ├── label_map.json
+│   │   <- Mapping of class index to wafer defect names
+│   └── mobilenet_best.onnx
+│       <- Exported ONNX model for edge / CPU deployment
 │
-├── src                            <- Source code for use in this project.
-│   ├── __init__.py                <- Makes src a Python module
-│   ├── config.py                  <- All configuration parameters
-│   ├── util.py                    <- Utility/helper functions
+├── reports
+│   └── confusion_matrix.png
+│       <- Evaluation result visualization
+│
+├── src
+│   ├── dataset
+│   │   <- Dataset loading and custom PyTorch dataset definitions
 │   │
-│   ├── data
-│   │   └── make_dataset.py        <- Script to generate dataset in required format
+│   ├── preprocessing
+│   │   <- Image preprocessing, resizing, augmentation logic
 │   │
-│   └── models                     <- Scripts to train, test and predict using the model
-│       ├── network.py             <- MobileNetV3-Small architecture definition
-│       ├── loss.py                <- Loss functions used during training
-│       ├── train_model.py         <- Training pipeline and checkpoint saving
-│       ├── test_model.py          <- Test model performance on test dataset
-│       └── predict_model.py       <- Run inference on new images
+│   ├── models
+│   │   <- MobileNetV3-Small architecture definition
+│   │
+│   ├── train
+│   │   <- Training pipeline and checkpoint saving
+│   │
+│   ├── evaluate
+│   │   <- Model evaluation, metrics, and testing scripts
+│   │
+│   ├── export
+│   │   <- Script to export trained PyTorch model to ONNX format
+│   │
+│   └── utils
+│       <- Helper and utility functions used across modules
 │
 ├── ui
-│   └── app.py                     <- Streamlit UI for live wafer defect predictions
+│   └── app.py
+│       <- Streamlit UI for live wafer defect prediction
 │
-├── weights                        <- Directory for saving model checkpoints
-├── logs                           <- Directory for saving terminal outputs/logs
-├── inference                      <- Directory where predicted outputs are stored
+├── .gitignore
+│   <- Specifies files/folders ignored by Git
 │
-└── reports
-    └── confusion_matrix.png       <- Performance visualization
+├── README.md
+│   <- Complete project documentation
+│
+└── requirements.txt
+    <- Python dependencies to reproduce the environment
+
 ```
 
 ## How to Run
