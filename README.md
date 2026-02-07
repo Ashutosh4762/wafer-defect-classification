@@ -1,5 +1,5 @@
-```
-#Wafer Defect Classification using MobileNetV3
+
+# Wafer Defect Classification using MobileNetV3
 
 This project focuses on automatic wafer defect classification using SEM (Scanning Electron Microscope) images. The goal is to accurately classify wafer surface conditions into 8 categories using a lightweight, high-performance deep learning model suitable for edge and real-time deployment.
 
@@ -9,14 +9,14 @@ The solution is designed to be:
 ✅ Fast on CPU
 ✅ Deployment-ready (ONNX supported)
 
-🧪 Problem Statement
+### Problem Statement
 Manual inspection of wafer defects is:
 Time-consuming
 Error-prone
 Not scalable
 This project automates the inspection process by using a CNN-based classifier trained on grayscale SEM images to identify defect types such as scratches, particles, residues, and more.
 
-🗂️ Defect Classes
+ ### Defect Classes
 The model classifies wafer images into the following 8 classes:
 Ball Defects
 Clean
@@ -28,13 +28,13 @@ Residues
 Scratches
 
 
-🧠 Model Architecture
+### Model Architecture
 Backbone: MobileNetV3-Small
 Input: 128 × 128 grayscale images
 
 
 
-Why MobileNetV3?
+### Why MobileNetV3?
 
 Depthwise separable convolutions
 Extremely lightweight
@@ -47,7 +47,7 @@ Efficient channel attention (SE blocks)
 ReLU / Hardswish activations
 Final fully-connected classification head
 
-🔄 Data Pipeline
+### Data Pipeline
 1️⃣ Raw Data
 data/raw/ organized by class folders (Ball Defects, Clean, Craters, etc.).
 
@@ -63,17 +63,18 @@ Train
 Validation
 Test
 
-🏋️ Training Details
+### Training Details
+```
 Loss Function: CrossEntropyLoss
 Optimizer: Adam
 Epochs: 20
 Batch Size: Configurable
 The model is trained on processed data only, ensuring consistency and reproducibility.
+```
 
 
-
-📊 Model Performance
-
+### Model Performance
+```
 ✅ Final Results
 Test Accuracy: ~96%
 Strong performance on: Clean, Ball Defects, and Scratches.
@@ -83,8 +84,6 @@ Precision
 Recall
 F1-Score
 Confusion Matrix
-
-```
 
 <img width="2000" height="1600" alt="confusion_matrix" src="https://github.com/user-attachments/assets/e407e17e-8c9a-46af-95e9-9b09ce5f33c7" />
 
