@@ -1,4 +1,4 @@
-# Wafer Defect Classification using MobileNetV3
+## Wafer Defect Classification using MobileNetV3
 
 This project focuses on automatic wafer defect classification using SEM (Scanning Electron Microscope) images. The goal is to accurately classify wafer surface conditions into 8 categories using a lightweight, high-performance deep learning model suitable for edge and real-time deployment.
 
@@ -8,14 +8,14 @@ The solution is designed to be:
 - ✅ Fast on CPU
 - ✅ Deployment-ready (ONNX supported)
 
-### Problem Statement
+## Problem Statement
 Manual inspection of wafer defects is:
 Time-consuming
 Error-prone
 Not scalable
 This project automates the inspection process by using a CNN-based classifier trained on grayscale SEM images to identify defect types such as scratches, particles, residues, and more.
 
- ### Defect Classes
+## Defect Classes
 The model classifies wafer images into the following 8 classes:
 Ball Defects
 Clean
@@ -27,13 +27,13 @@ Residues
 Scratches
 
 
-### Model Architecture
+## Model Architecture
 Backbone: MobileNetV3-Small
 Input: 128 × 128 grayscale images
 
 
 
-### Why MobileNetV3?
+## Why MobileNetV3?
 
 Depthwise separable convolutions
 Extremely lightweight
@@ -46,7 +46,7 @@ Efficient channel attention (SE blocks)
 ReLU / Hardswish activations
 Final fully-connected classification head
 
-### Data Pipeline
+## Data Pipeline
 1️⃣ Raw Data
 data/raw/ organized by class folders (Ball Defects, Clean, Craters, etc.).
 
@@ -62,7 +62,7 @@ Train
 Validation
 Test
 
-### Training Details
+## Training Details
 ```
 Loss Function: CrossEntropyLoss
 Optimizer: Adam
@@ -72,7 +72,7 @@ The model is trained on processed data only, ensuring consistency and reproducib
 ```
 
 
-### Model Performance
+## Model Performance
 ```
 ✅ Final Results
 Test Accuracy: ~96%
@@ -88,7 +88,7 @@ Confusion Matrix
 ```
 ```
 
-### 🖥️ User Interface (Streamlit)
+## 🖥️ User Interface (Streamlit)
 A minimal Streamlit UI is provided to:
 Upload single or multiple images
 View images directly
@@ -98,7 +98,7 @@ Clean and easy-to-use interface
 
 <img width="1909" height="902" alt="Screenshot 2026-02-07 131157" src="https://github.com/user-attachments/assets/b749072f-5a28-4ae8-ba40-6261eea43a7f" />
 
-### Model Export & Deployment
+## Model Export & Deployment
 
 ONNX Support
 The trained PyTorch model can be exported to ONNX for:
@@ -108,7 +108,7 @@ Cross-platform deployment
 Model size after export: ~6 MB (No external onnx_data required)
 
 
-### Project Structure
+## Project Structure
 ```
 Project Organization
 
@@ -146,7 +146,7 @@ Project Organization
     └── confusion_matrix.png       <- Performance visualization
 ```
 
-### How to Run
+## How to Run
 1.Install Requirements
 ```
 pip install -r requirements.txt
@@ -180,6 +180,7 @@ python -m src.export.export_onnx
    https://arxiv.org/abs/1905.02244
 
 
-### Conclusion
+## Conclusion
+
 This project demonstrates that high-accuracy wafer defect classification can be achieved using a compact, efficient CNN model, making it ideal for industrial, edge, and real-time inspection systems.
 
