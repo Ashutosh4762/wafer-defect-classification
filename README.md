@@ -1,4 +1,3 @@
-<img width="1909" height="902" alt="Screenshot 2026-02-07 131157" src="https://github.com/user-attachments/assets/3f5060e1-0a9c-4afc-83c1-27235be33238" />
 # Wafer Defect Classification using MobileNetV3
 
 This project focuses on automatic wafer defect classification using SEM (Scanning Electron Microscope) images. The goal is to accurately classify wafer surface conditions into 8 categories using a lightweight, high-performance deep learning model suitable for edge and real-time deployment.
