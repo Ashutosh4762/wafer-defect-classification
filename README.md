@@ -111,56 +111,63 @@ Model size after export: ~6 MB (No external onnx_data required)
 
 ## Project Structure
 ```
-Project Organization
-
 ├── config
 │   └── config.yaml
-│       -> All project configuration: paths, hyperparameters, settings
+│       <- Central configuration file (paths, hyperparameters, runtime settings)
 │
 ├── models
 │   ├── label_map.json
-│   │   -> Mapping of class index to wafer defect names
+│   │   <- Mapping of class indices to wafer defect names
 │   └── mobilenet_best.onnx
-│       -> Exported ONNX model for edge / CPU deployment
+│       <- Exported ONNX model for edge / CPU deployment
 │
 ├── reports
 │   └── confusion_matrix.png
-│       -> Evaluation result visualization
+│       <- Model evaluation visualization
 │
 ├── src
 │   ├── dataset
-|   └──wafer_dataset.py  -> Dataset loading and custom PyTorch dataset definitions
+│   │   └── wafer_dataset.py
+│   │       <- Custom PyTorch Dataset for wafer defect images
 │   │
 │   ├── preprocessing
-│   │   -> Image preprocessing, resizing, augmentation logic
+│   │   ├── preprocess.py
+│   │   │   <- Image preprocessing (resize, normalization, transforms)
+│   │   └── split_dataset.py
+│   │       <- Train / validation / test dataset splitting logic
 │   │
 │   ├── models
-│   │   -> MobileNetV3-Small architecture definition
+│   │   └── mobilenet_v3.py
+│   │       <- MobileNetV3-Small model architecture definition
 │   │
 │   ├── train
-│   │   -> Training pipeline and checkpoint saving
+│   │   └── train.py
+│   │       <- Training pipeline, loss calculation, and checkpoint saving
 │   │
 │   ├── evaluate
-│   │   -> Model evaluation, metrics, and testing scripts
+│   │   └── evaluate.py
+│   │       <- Model evaluation, metrics computation, and testing
 │   │
 │   ├── export
-│   │   -> Script to export trained PyTorch model to ONNX format
+│   │   └── export_onnx.py
+│   │       <- Export trained PyTorch model to ONNX format
 │   │
 │   └── utils
-│       -> Helper and utility functions used across modules
+│       └── config.py
+│           <- Utility functions for loading and managing configurations
 │
 ├── ui
 │   └── app.py
-│       -> Streamlit UI for live wafer defect prediction
+│       <- Streamlit UI for live wafer defect prediction
 │
 ├── .gitignore
-│   -> Specifies files/folders ignored by Git
+│   <- Specifies files and folders ignored by Git
 │
 ├── README.md
-│   -> Complete project documentation
+│   <- Complete project documentation
 │
 └── requirements.txt
-    -> Python dependencies to reproduce the environment
+    <- Python dependencies required to run the project
 
 ```
 
