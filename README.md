@@ -115,52 +115,52 @@ Project Organization
 
 ├── config
 │   └── config.yaml
-│       <- All project configuration: paths, hyperparameters, settings
+│       -> All project configuration: paths, hyperparameters, settings
 │
 ├── models
 │   ├── label_map.json
-│   │   <- Mapping of class index to wafer defect names
+│   │   -> Mapping of class index to wafer defect names
 │   └── mobilenet_best.onnx
-│       <- Exported ONNX model for edge / CPU deployment
+│       -> Exported ONNX model for edge / CPU deployment
 │
 ├── reports
 │   └── confusion_matrix.png
-│       <- Evaluation result visualization
+│       -> Evaluation result visualization
 │
 ├── src
 │   ├── dataset
-│   │   <- Dataset loading and custom PyTorch dataset definitions
+|   └──wafer_dataset.py  -> Dataset loading and custom PyTorch dataset definitions
 │   │
 │   ├── preprocessing
-│   │   <- Image preprocessing, resizing, augmentation logic
+│   │   -> Image preprocessing, resizing, augmentation logic
 │   │
 │   ├── models
-│   │   <- MobileNetV3-Small architecture definition
+│   │   -> MobileNetV3-Small architecture definition
 │   │
 │   ├── train
-│   │   <- Training pipeline and checkpoint saving
+│   │   -> Training pipeline and checkpoint saving
 │   │
 │   ├── evaluate
-│   │   <- Model evaluation, metrics, and testing scripts
+│   │   -> Model evaluation, metrics, and testing scripts
 │   │
 │   ├── export
-│   │   <- Script to export trained PyTorch model to ONNX format
+│   │   -> Script to export trained PyTorch model to ONNX format
 │   │
 │   └── utils
-│       <- Helper and utility functions used across modules
+│       -> Helper and utility functions used across modules
 │
 ├── ui
 │   └── app.py
-│       <- Streamlit UI for live wafer defect prediction
+│       -> Streamlit UI for live wafer defect prediction
 │
 ├── .gitignore
-│   <- Specifies files/folders ignored by Git
+│   -> Specifies files/folders ignored by Git
 │
 ├── README.md
-│   <- Complete project documentation
+│   -> Complete project documentation
 │
 └── requirements.txt
-    <- Python dependencies to reproduce the environment
+    -> Python dependencies to reproduce the environment
 
 ```
 
