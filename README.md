@@ -96,7 +96,8 @@ Predict defect class for each image
 Clean and easy-to-use interface
 <img width="1905" height="820" alt="Screenshot 2026-02-07 131138" src="https://github.com/user-attachments/assets/f300f52e-3f09-43ca-a19c-d787e5fba0b6" />
 
-<img width="1909" height="902" alt="Screenshot 2026-02-07 131157" src="https://github.com/user-attachments/assets/b749072f-5a28-4ae8-ba40-6261eea43a7f" />
+<img width="1848" height="880" alt="image" src="https://github.com/user-attachments/assets/8db3844b-b2e0-4a44-a461-a7cc2de5b038" />
+
 
 ## Model Export & Deployment
 
