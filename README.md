@@ -3,10 +3,10 @@
 This project focuses on automatic wafer defect classification using SEM (Scanning Electron Microscope) images. The goal is to accurately classify wafer surface conditions into 8 categories using a lightweight, high-performance deep learning model suitable for edge and real-time deployment.
 
 The solution is designed to be:
->✅ Accurate
->✅ Lightweight (~6 MB model)
->✅ Fast on CPU
->✅ Deployment-ready (ONNX supported)
+-✅ Accurate
+-✅ Lightweight (~6 MB model)
+-✅ Fast on CPU
+-✅ Deployment-ready (ONNX supported)
 
 ### Problem Statement
 Manual inspection of wafer defects is:
