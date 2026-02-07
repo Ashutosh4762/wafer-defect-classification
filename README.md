@@ -89,7 +89,7 @@ Confusion Matrix
 
 ```
 
-🖥️ User Interface (Streamlit)
+### 🖥️ User Interface (Streamlit)
 A minimal Streamlit UI is provided to:
 Upload single or multiple images
 View images directly
@@ -98,7 +98,7 @@ Clean and easy-to-use interface
 
 
 
-📦 Model Export & Deployment
+### Model Export & Deployment
 
 ONNX Support
 The trained PyTorch model can be exported to ONNX for:
@@ -108,8 +108,8 @@ Cross-platform deployment
 Model size after export: ~6 MB (No external onnx_data required)
 
 
-🛠️ Project Structure
-
+### Project Structure
+```
 wafer-defect-classification/
 ├── data/
 │   ├── raw/
@@ -132,24 +132,34 @@ wafer-defect-classification/
 ├── config/
 │   └── config.yaml
 └── README.md
+```
 
 
-
-▶️ How to Run
+### How to Run
 1. Preprocess Data
+```
 python -m src.preprocessing.preprocess
 python -m src.preprocessing.split_dataset
-2. Train Model
-python -m src.train.train
-3. Evaluate Model
-python -m src.evaluate.evaluate
-4. Launch UI
-python -m streamlit run ui/app.py
-5. Export to ONNX
-python -m src.export.export_onnx
-
-
-
-🏁 Conclusion
-This project demonstrates that high-accuracy wafer defect classification can be achieved using a compact, efficient CNN model, making it ideal for industrial, edge, and real-time inspection systems.
 ```
+2. Train Model
+```
+python -m src.train.train
+```
+3. Evaluate Model
+```
+python -m src.evaluate.evaluate
+```
+4. Launch UI
+```
+python -m streamlit run ui/app.py
+```
+5. Export to ONNX
+```
+python -m src.export.export_onnx
+```
+
+
+
+### Conclusion
+This project demonstrates that high-accuracy wafer defect classification can be achieved using a compact, efficient CNN model, making it ideal for industrial, edge, and real-time inspection systems.
+
