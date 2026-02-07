@@ -1,4 +1,4 @@
-
+<img width="1909" height="902" alt="Screenshot 2026-02-07 131157" src="https://github.com/user-attachments/assets/3f5060e1-0a9c-4afc-83c1-27235be33238" />
 # Wafer Defect Classification using MobileNetV3
 
 This project focuses on automatic wafer defect classification using SEM (Scanning Electron Microscope) images. The goal is to accurately classify wafer surface conditions into 8 categories using a lightweight, high-performance deep learning model suitable for edge and real-time deployment.
@@ -95,8 +95,9 @@ Upload single or multiple images
 View images directly
 Predict defect class for each image
 Clean and easy-to-use interface
+<img width="1905" height="820" alt="Screenshot 2026-02-07 131138" src="https://github.com/user-attachments/assets/f300f52e-3f09-43ca-a19c-d787e5fba0b6" />
 
-
+<img width="1909" height="902" alt="Screenshot 2026-02-07 131157" src="https://github.com/user-attachments/assets/b749072f-5a28-4ae8-ba40-6261eea43a7f" />
 
 ### Model Export & Deployment
 
@@ -110,54 +111,74 @@ Model size after export: ~6 MB (No external onnx_data required)
 
 ### Project Structure
 ```
-wafer-defect-classification/
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── splits/
-├── src/
-│   ├── dataset/
-│   ├── preprocessing/
-│   ├── models/
-│   ├── train/
-│   ├── evaluate/
-│   └── export/
-├── ui/
-│   └── app.py
-├── models/
-│   ├── mobilenet_best.pth
-│   └── mobilenet_latest.pth
-├── reports/
-│   └── confusion_matrix.png
-├── config/
-│   └── config.yaml
-└── README.md
+Project Organization
+
+├── LICENSE
+├── README.md                      <- The top-level README for developers using this project.
+├── requirements.txt               <- The requirements file for reproducing the environment.
+│
+├── data
+│   ├── processed                  <- The final, canonical dataset used for modeling.
+│   └── raw                        <- The original, immutable SEM image dataset.
+│
+├── src                            <- Source code for use in this project.
+│   ├── __init__.py                <- Makes src a Python module
+│   ├── config.py                  <- All configuration parameters
+│   ├── util.py                    <- Utility/helper functions
+│   │
+│   ├── data
+│   │   └── make_dataset.py        <- Script to generate dataset in required format
+│   │
+│   └── models                     <- Scripts to train, test and predict using the model
+│       ├── network.py             <- MobileNetV3-Small architecture definition
+│       ├── loss.py                <- Loss functions used during training
+│       ├── train_model.py         <- Training pipeline and checkpoint saving
+│       ├── test_model.py          <- Test model performance on test dataset
+│       └── predict_model.py       <- Run inference on new images
+│
+├── ui
+│   └── app.py                     <- Streamlit UI for live wafer defect predictions
+│
+├── weights                        <- Directory for saving model checkpoints
+├── logs                           <- Directory for saving terminal outputs/logs
+├── inference                      <- Directory where predicted outputs are stored
+│
+└── reports
+    └── confusion_matrix.png       <- Performance visualization
 ```
 
-
 ### How to Run
-1. Preprocess Data
+1.Install Requirements
+```
+pip install -r requirements.txt
+```
+2. Preprocess Data
 ```
 python -m src.preprocessing.preprocess
 python -m src.preprocessing.split_dataset
 ```
-2. Train Model
+3. Train Model
 ```
 python -m src.train.train
 ```
-3. Evaluate Model
+4. Evaluate Model
 ```
 python -m src.evaluate.evaluate
 ```
-4. Launch UI
+5. Launch UI
 ```
 python -m streamlit run ui/app.py
 ```
-5. Export to ONNX
+6. Export to ONNX
 ```
 python -m src.export.export_onnx
 ```
 
+## References
+
+1. Andrew Howard, Mark Sandler, Grace Chu, Liang-Chieh Chen, Bo Chen, Mingxing Tan, Weijun Wang, Yukun Zhu, Ruoming Pang, Vijay Vasudevan, Quoc V. Le, Hartwig Adam.  
+   **Searching for MobileNetV3.** *Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2019.*  
+   https://arxiv.org/abs/1905.02244
 
 
 ### Conclusion
