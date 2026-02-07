@@ -84,9 +84,9 @@ Precision
 Recall
 F1-Score
 Confusion Matrix
-
+```
 <img width="2000" height="1600" alt="confusion_matrix" src="https://github.com/user-attachments/assets/e407e17e-8c9a-46af-95e9-9b09ce5f33c7" />
-
+```
 ```
 
 ### 🖥️ User Interface (Streamlit)
