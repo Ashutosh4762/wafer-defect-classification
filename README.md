@@ -26,7 +26,7 @@ Train/Val/Test split: 80 / 10 / 10
 Image type: Grayscale 
 Labeling method/source: manual 
 ```
-One Drive Link for Dataset : https://obtmhl-my.sharepoint.com/:f:/g/personal/ashutosh_kumar_orbitsolutions_net/IgAiGahfY-rSSoWl_s1AeVJZAbeI24zzUZJAjkt_ExsHJFA?e=eaKGSJ
+One Drive Link for Dataset : https://obtmhl-my.sharepoint.com/:f:/g/personal/ashutosh_kumar_orbitsolutions_net/IgCEUmVRgohuTrP4ejEbKypoAd5RK5g7SyuwWbhmB5qmGmk?e=tBupwx
 
 
 ## Model Architecture
