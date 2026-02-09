@@ -15,16 +15,17 @@ Error-prone
 Not scalable
 This project automates the inspection process by using a CNN-based classifier trained on grayscale SEM images to identify defect types such as scratches, particles, residues, and more.
 
-## Defect Classes
-The model classifies wafer images into the following 8 classes:
-Ball Defects
-Clean
-Craters
-Flakes
-Others
-Particles
-Residues
-Scratches
+## Dataset
+Total images planned/current: 1600
+No. of classes: 8 
+Class list: Scratches, Particles, Ball defects, Craters, Flakes, 
+Residues, Clean , Others
+Class balance plan: 200 per class
+Train/Val/Test split: 80 / 10 / 10
+Image type: Grayscale 
+Labeling method/source: manual 
+
+One Drive Link for Dataset : https://obtmhl-my.sharepoint.com/:f:/g/personal/ashutosh_kumar_orbitsolutions_net/IgAiGahfY-rSSoWl_s1AeVJZAbeI24zzUZJAjkt_ExsHJFA?e=eaKGSJ
 
 
 ## Model Architecture
