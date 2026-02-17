@@ -113,6 +113,15 @@ Model size after export: ~6 MB (No external onnx_data required)
 
 ## Project Structure
 ```
+├── Phase_2_files
+│   ├── Logcreation.py
+│   │   <- Code for creating logfile
+│   └── Logs.log
+│   │    <- Logs
+│   ├── hackathon_test_dataset_prediction.py
+│      <- code of evaluating test dataset
+
+
 ├── config
 │   └── config.yaml
 │       <- Central configuration file (paths, hyperparameters, runtime settings)
@@ -149,6 +158,10 @@ Model size after export: ~6 MB (No external onnx_data required)
 │   ├── evaluate
 │   │   └── evaluate.py
 │   │       <- Model evaluation, metrics computation, and testing
+│   │
+│    ├── inference
+│   │   └── predict.py
+│   │       <- code for prediction on test data
 │   │
 │   ├── export
 │   │   └── export_onnx.py
