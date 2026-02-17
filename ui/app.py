@@ -112,7 +112,7 @@ def extract_images_from_zip(zip_bytes: bytes):
 # Streamlit UI
 # -----------------------
 st.set_page_config(page_title="Wafer Defect Classifier", layout="wide")
-st.title("🧪 Wafer Defect Classifier (MobileNetV3-Small)")
+st.title("🧪 Wafer Defect Classifier")
 st.caption("Upload images (single/multiple) or a ZIP folder. The app shows prediction + confidence for each image.")
 
 with st.sidebar:
@@ -160,7 +160,7 @@ with tabs[0]:
                     c.error(f"Failed: {f.name}\n{ex}")
                     continue
 
-                c.image(img, caption=f.name, use_container_width=True)
+                c.image(img, caption=f.name, width=True)
                 c.markdown(f"**Prediction:** `{pred}`")
                 c.markdown(f"**Confidence:** `{conf:.3f}`")
 

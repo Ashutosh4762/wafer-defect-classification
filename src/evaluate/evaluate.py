@@ -30,7 +30,7 @@ def main(config_path="config/config.yaml"):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"✅ Device: {device}")
 
-    test_root = os.path.join(splits_root, "test")
+    test_root = os.path.join(splits_root, "hack_test")
     if not os.path.exists(test_root):
         raise FileNotFoundError(
             f"Test split not found: {test_root}\n"

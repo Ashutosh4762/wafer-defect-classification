@@ -1,0 +1,56 @@
+dataset:
+  raw_path: data/raw
+  processed_path: data/processed
+  splits_path: data/splits
+  image:
+    size: 128
+    extensions:
+    - .jpg
+    - .jpeg
+    - .png
+    - .bmp
+    - .tif
+    - .tiff
+    - .webp
+preprocessing:
+  overwrite: true
+  target_per_class: 200
+  seed: 42
+  augment:
+    enabled: true
+    flip_horizontal: true
+    flip_vertical: true
+    rotate_degrees:
+    - -12
+    - -7
+    - -3
+    - 3
+    - 7
+    - 12
+    brightness_delta:
+    - -35
+    - -20
+    - -10
+    - 10
+    - 20
+    - 35
+    contrast_alpha:
+    - 0.75
+    - 0.85
+    - 1.15
+    - 1.25
+split:
+  enabled: true
+  train: 0.8
+  val: 0.1
+  test: 0.1
+  seed: 42
+training:
+  batch_size: 32
+  epochs: 20
+  learning_rate: 0.0003
+  num_workers: 2
+  seed: 42
+model:
+  name: mobilenet_v3_small
+  pretrained: true
